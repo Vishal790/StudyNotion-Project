@@ -35,7 +35,7 @@ export default function Sidebar() {
       <TbTableOptions/>
 
       </button>
-      <div className={`lg:min-w-[220px] flex flex-col border-r-[1px] border-r-richblack-700 bg-richblack-800 py-10 ${isSidebarOpen ? '' : 'hidden'}`}>
+      <div className={`lg:min-w-[220px] flex flex-col border-r-[1px] border-r-richblack-700 bg-richblack-800 py-10 ${isSidebarOpen ? 'lg:block' : 'hidden'} md:block`}>
         <div className="flex flex-col">
           {sidebarLinks.map((link) => {
             if (link.type && user?.accountType !== link.type) return null;
