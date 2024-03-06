@@ -1,50 +1,50 @@
-import { useState } from "react"
-import { VscSignOut } from "react-icons/vsc"
-import { useDispatch, useSelector } from "react-redux"
-import { useNavigate } from "react-router-dom"
-import { GrCart } from "react-icons/gr";
+import { useState } from "react";
+import { VscSignOut } from "react-icons/vsc";
+import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { sidebarLinks } from "../../../data/dashboard-links";
+import { logout } from "../../../services/operations/authAPI";
+import ConfirmationModal from "../../common/ConfirmationModal";
+import SidebarLink from "./SidebarLink";
+import { TbTableOptions } from "react-icons/tb";
 
-
-import { sidebarLinks } from "../../../data/dashboard-links"
-import { logout } from "../../../services/operations/authAPI"
-import ConfirmationModal from "../../common/ConfirmationModal"
-import SidebarLink from "./SidebarLink" 
 
 export default function Sidebar() {
-  const { user, loading: profileLoading } = useSelector(
-    (state) => state.profile
-  )
-  const { loading: authLoading } = useSelector((state) => state.auth)
-  const dispatch = useDispatch()
-  const navigate = useNavigate()
-  // to keep track of confirmation modal
-  const [confirmationModal, setConfirmationModal] = useState(null)
+  const { user, loading: profileLoading } = useSelector((state) => state.profile);
+  const { loading: authLoading } = useSelector((state) => state.auth);
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [confirmationModal, setConfirmationModal] = useState(null);
+  
 
   if (profileLoading || authLoading) {
     return (
       <div className="grid h-[calc(100vh-3.5rem)] min-w-[220px] items-center border-r-[1px] border-r-richblack-700 bg-richblack-800">
         <div className="spinner"></div>
       </div>
-    )
+    );
   }
 
   return (
     <>
-      <div className="flex h-[calc(100vh-3.5rem)] max-w-[100px] lg:min-w-[220px] flex-col border-r-[1px] border-r-richblack-700 bg-richblack-800 py-10">
+      <button
+        onClick={() => setIsSidebarOpen(!isSidebarOpen)}
+        className="md:hidden fixed top-20 right-10  p-2 rounded-full text-2xl  bg-yellow-50   text-richblack-800"
+      >
+      <TbTableOptions/>
+
+      </button>
+      <div className={`lg:min-w-[220px] flex flex-col border-r-[1px] border-r-richblack-700 bg-richblack-800 py-10 ${isSidebarOpen ? '' : 'hidden'}`}>
         <div className="flex flex-col">
           {sidebarLinks.map((link) => {
-            if (link.type && user?.accountType !== link.type) return null
-            return (
-              <SidebarLink key={link.id} link={link} iconName={link.icon} />
-            )
+            if (link.type && user?.accountType !== link.type) return null;
+            return <SidebarLink key={link.id} link={link} iconName={link.icon} />;
           })}
         </div>
         <div className="mx-auto mt-6 mb-6 h-[1px] w-10/12 bg-richblack-700" />
         <div className="flex flex-col">
-          <SidebarLink
-            link={{ name: "Settings", path: "/dashboard/settings" }}
-            iconName="VscSettingsGear"
-          />
+          <SidebarLink link={{ name: "Settings", path: "/dashboard/settings" }} iconName="VscSettingsGear" />
           <button
             onClick={() =>
               setConfirmationModal({
@@ -67,5 +67,5 @@ export default function Sidebar() {
       </div>
       {confirmationModal && <ConfirmationModal modalData={confirmationModal} />}
     </>
-  )
+  );
 }
