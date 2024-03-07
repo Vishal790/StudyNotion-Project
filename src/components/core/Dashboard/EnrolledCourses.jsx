@@ -65,10 +65,10 @@ export default function EnrolledCourses() {
                 <img
                   src={course.thumbnail}
                   alt="course_img"
-                  className="h-14 w-14 rounded-lg object-cover"
+                  className="h-14 w-14 rounded-lg object-cover hidden md:block"
                 />
                 <div className="flex max-w-xs flex-col gap-2">
-                  <p className="font-semibold">{course.courseName}</p>
+                  <p className="font-semibold text-sm md:text-lg">{course.courseName}</p>
                   <p className="text-xs text-richblack-300">
                     {course.courseDescription.length > 50
                       ? `${course.courseDescription.slice(0, 50)}...`

@@ -248,5 +248,13 @@ details > summary::-webkit-details-marker {
 .emboss{
   box-shadow: 4px 2px 108px -6px rgba(104, 99, 99, 0.205) inset,
   0px 7px 13px -3px rgba(0, 0, 0, 0),
-  0px -3px 0px 0px rgba(0, 0, 0, 0) inset;
+}
+
+
+.highlight_gradient{
+  background: #3B54CF;
+background: linear-gradient(to right, #3B54CF 0%, #CFC5BA 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+
 }

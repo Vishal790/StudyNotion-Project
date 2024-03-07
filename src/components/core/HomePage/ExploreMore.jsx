@@ -45,14 +45,14 @@ const ExploreMore = () => {
     return (
         <div>
             <div className='text-4xl font-semibold text-center'>
-                Unlock the <HighlightText text={"Power of code"} />
+                Unlock the <HighlightText text={" Power of code"} />
             </div>
 
             <p className=' text-richblack-300 text-center text-[16px]  mt-3 '>
                 Learn to build anything you can imagine
             </p>
 
-            <div className=' flex rounded-full bg-richblack-800 mb-5 border border-richblack-500 mt-5 px-1 py-1'>
+            <div className=' flex flex-col md:flex-row md:rounded-full bg-richblack-800 mb-5 border border-richblack-500 mt-5 px-1 py-1'>
                 {
                     tabsName.map((tab, index) => {
                         return (

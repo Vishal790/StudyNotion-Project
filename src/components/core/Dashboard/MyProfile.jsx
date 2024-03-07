@@ -30,7 +30,7 @@ const MyProfile = () => {
 
       {/* section 1 */}
 
-      <div className=" flex flex-col gap-y-3 md:flex-row  items-center justify-between rounded-md border-[1px] border-richblack-700 bg-richblack-800 p-8 px-12">
+      <div className=" flex flex-col gap-y-3 md:flex-row w-[400px]  sm:w-auto items-center justify-between rounded-md border-[1px] border-richblack-700 bg-richblack-800 p-8 px-12">
         <div className="flex items-center gap-x-4">
           <img
             src={user?.image}
@@ -58,7 +58,7 @@ const MyProfile = () => {
 
       {/* section 2 */}
 
-      <div className="my-10 flex flex-col gap-y-10 rounded-md border-[1px] border-richblack-700 bg-richblack-800 p-8 px-12">
+      <div className="my-10 flex flex-col gap-y-10 rounded-md border-[1px] w-[400px]  sm:w-auto border-richblack-700 bg-richblack-800 p-8 px-12">
         <div className="flex w-full items-center justify-between  gap-y-3 flex-col md:flex-row" >
           <p className="text-lg font-semibold text-richblack-5">About</p>
           <IconBtn
@@ -82,7 +82,7 @@ const MyProfile = () => {
       </div>
 
       {/* section 3 */}
-      <div className="my-10 flex flex-col gap-y-10 rounded-md border-[1px] border-richblack-700 bg-richblack-800 p-8 px-12">
+      <div className="my-10 flex flex-col w-[400px]  sm:w-auto gap-y-10 rounded-md border-[1px] border-richblack-700 bg-richblack-800 p-8 px-12">
         <div className="flex w-full items-center justify-between">
           <p className="text-lg font-semibold text-richblack-5">
             Personal Details

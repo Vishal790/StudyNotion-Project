@@ -144,7 +144,7 @@ function Navbar() {
         </div>
 
         {/* button for mobile */}
-        <button className="mr-4 md:hidden">
+        <button className="mr-4 md:hidden ">
           <div className="flex items-center justify-between  py-4">
             <nav>
               <section className="MOBILE-MENU flex lg:hidden">
@@ -163,12 +163,12 @@ function Navbar() {
                 <div
                   className={
                     isNavOpen
-                      ? "showMenuNav  border-[1px]  bg-richblack-800 text-richblack-25"
+                      ? "showMenuNav border-[1px] bg-richblack-800 text-richblack-25 z-[1000]"
                       : "hideMenuNav"
                   }
                 >
                   <div
-                    className="absolute top-0 right-0 px-8 py-8"
+                    className="absolute top-0 right-0 px-8 py-8 "
                     onClick={() => setIsNavOpen(false)}
                   >
                     <svg
@@ -257,7 +257,7 @@ function Navbar() {
                 top: 0;
                 right: 0;
                 left: 0;
-                z-index: 10;
+                z-index: 101 ;
                 display: flex;
                 flex-direction: column;
                 justify-content: space-evenly;

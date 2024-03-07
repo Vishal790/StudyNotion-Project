@@ -33,7 +33,7 @@ function Home() {
         {/* Heading */}
         <div className="text-center text-4xl font-semibold">
           Empower Your Future with
-          <HighlightText text={"Coding Skills"} />
+          <HighlightText text={" Coding Skills"} />
         </div>
 
         {/* Sub Heading */}
@@ -73,7 +73,7 @@ function Home() {
             heading={
               <div className="text-4xl font-semibold">
                 Unlock your
-                <HighlightText text={"coding potential"} /> with our online
+                <HighlightText text={" coding potential"} /> with our online
                 courses.
               </div>
             }
@@ -93,7 +93,7 @@ function Home() {
             codeColor={"text-yellow-25"}
             codeblock={`<!DOCTYPE html>\n <html lang="en">\n<head>\n<title>This is myPage</title>\n</head>\n<body>\n<h1><a href="/">Header</a></h1>\n<nav> <a href="/one">One</a> <a href="/two">Two</a> <a href="/three">Three</a>\n</nav>\n</body>`}
             backgroundGradient={<div className="codeblock1 absolute"></div>}
-          />
+          />  
         </div>
 
         {/* Code Section 2 */}
@@ -103,7 +103,7 @@ function Home() {
             heading={
               <div className="w-[100%] text-4xl font-semibold lg:w-[50%]">
                 Start
-                <HighlightText text={"coding in seconds"} />
+                <HighlightText text={" coding in seconds"} />
               </div>
             }
             subheading={
@@ -154,7 +154,7 @@ function Home() {
           <div className="mb-10 mt-[-100px] flex flex-col justify-between gap-7 lg:mt-20 lg:flex-row lg:gap-0">
             <div className="text-4xl font-semibold lg:w-[45%] ">
               Get the skills you need for a{" "}
-              <HighlightText text={"job that is in demand."} />
+              <HighlightText text={" job that is in demand."} />
             </div>
             <div className="flex flex-col items-start gap-10 lg:w-[40%]">
               <div className="text-[16px]">
