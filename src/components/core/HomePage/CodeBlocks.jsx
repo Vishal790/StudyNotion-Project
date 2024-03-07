@@ -14,15 +14,15 @@ const CodeBlocks = ({ position, heading, subheading, ctabtn1, ctabtn2, codeblock
   }, []);
 
   return (
-    <div className={`flex ${position} my-20 justify-between gap-10 w-[450px] md:w-auto`}>
+    <div className={`flex ${position} my-20 justify-between gap-10 w-[420 px] md:w-auto`}>
       {backgroundGradient}
       {/* Section1 */}
-      <div className=' w-[50%] flex-col gap-8  ml-2 '>
+      <div className=' w-[50%] flex-col gap-8  ml-6 '>
         {heading}
         <div className='text-richblack-300 font-bold'>
           {subheading}
         </div>
-        <div className=' flex gap-7 mt-7 '>
+        <div className=' flex flex-col md:flex-row gap-7 mt-7 '>
           <CTAButton active={ctabtn1.active} linkto={ctabtn1.linkto}>
             <div className='flex gap-2 items-center'>
               {ctabtn1.btnText}
