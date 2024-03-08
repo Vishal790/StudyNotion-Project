@@ -199,7 +199,7 @@ function CourseDetails() {
               </div>
             </div>
             <div className="flex w-full flex-col gap-4 border-y border-y-richblack-500 py-4 lg:hidden">
-              { user.accountType !== ACCOUNT_TYPE.INSTRUCTOR && (
+              { user && user.accountType !== ACCOUNT_TYPE.INSTRUCTOR && (
                 <>
                   <button className="yellowButton" onClick={handleBuyCourse}>
                     Buy Now
