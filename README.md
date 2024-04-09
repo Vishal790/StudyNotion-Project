@@ -65,7 +65,6 @@ The database for the platform is built using MongoDB, providing a flexible and s
 
 The StudyNotion platform's API is designed following the REST architectural style. It is implemented using Node.js and Express.js, using JSON for data exchange and standard HTTP request methods such as GET, POST, PUT, and DELETE.
 
-For detailed API documentation and endpoints, refer to the [API Documentation](api-docs.md).
 
 ## Installation
 
