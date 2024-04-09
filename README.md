@@ -69,7 +69,7 @@ For detailed API documentation and endpoints, refer to the [API Documentation](a
 
 ## Installation
 
-1. Clone the repository: `git clone https://github.com/username/repo.git`
+1. Clone the repository: `git clone`
 2. Navigate to the project directory: `cd StudyNotion`
 3. Install dependencies: `npm install`
 
